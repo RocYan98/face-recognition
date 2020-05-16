@@ -72,7 +72,7 @@ def sign_up():
     def sign():
         try:
             if password1.get() == password2.get():
-                sql = """insert into account values ('%s','%s')""" % (username.get(), password1.get())
+                sql = """insert into account(username, pwd) values ('%s','%s')""" % (username.get(), password1.get())
                 sql_conn(sql)
                 tkinter.messagebox.showinfo('', '注册成功!')
                 top.destroy()
@@ -104,7 +104,7 @@ def change_password():
     def change():
         sql1 = """select * from account where username='%s'""" % username.get()
         ret1 = sql_conn(sql1)
-        sql2 = """select * from account where username='%s' and pw='%s'""" % (username.get(), oldpassword.get())
+        sql2 = """select * from account where username='%s' and pwd='%s'""" % (username.get(), oldpassword.get())
         ret2 = sql_conn(sql2)
         if not (len(ret1) > 0):
             tkinter.messagebox.showerror(title='修改失败', message='账号不存在！')
@@ -113,7 +113,7 @@ def change_password():
         elif password1.get() != password2.get():
             tkinter.messagebox.showerror(title='修改失败', message='两次输入的密码不同！')
         else:
-            sql = "update account set pw='" + password1.get() + "' where Snum='" + username.get() + "';"
+            sql = "update account set pwd='" + password1.get() + "' where username='" + username.get() + "';"
             sql_conn(sql)
             tkinter.messagebox.showinfo('', '修改成功!')
             top.destroy()
