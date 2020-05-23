@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8087c9af-37e4-449b-89cb-bec7c8a2807f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1bDAf0E5599JRGTXbXTjFtCM91j" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dataset" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dataset" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.show_camera">
+    <configuration name="show_camera" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="face_rec" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/show_camera.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="face_rec" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.temp" />
+        <item itemvalue="Python.show_camera" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8087c9af-37e4-449b-89cb-bec7c8a2807f" name="Default Changelist" comment="" />
+      <created>1588156389687</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588156389687</updated>
+      <workItem from="1588156391701" duration="2547000" />
+      <workItem from="1588162811635" duration="6787000" />
+      <workItem from="1589456741543" duration="9522000" />
+      <workItem from="1589510076621" duration="19694000" />
+      <workItem from="1589596776507" duration="610000" />
+      <workItem from="1590218850419" duration="30000" />
+      <workItem from="1590218893421" duration="3586000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="474" y="188" key="#Inspections" timestamp="1589552383939">
+      <screen x="0" y="23" width="1680" height="961" />
+    </state>
+    <state x="474" y="188" key="#Inspections/0.23.1680.959@0.23.1680.959" timestamp="1589512509998" />
+    <state x="474" y="188" key="#Inspections/0.23.1680.961@0.23.1680.961" timestamp="1589552383939" />
+    <state x="192" y="339" key="#SQL_Dialects" timestamp="1589466589631">
+      <screen x="0" y="23" width="1680" height="959" />
+    </state>
+    <state x="192" y="339" key="#SQL_Dialects/0.23.1680.959@0.23.1680.959" timestamp="1589466589631" />
+    <state x="304" y="165" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588156572292">
+      <screen x="0" y="23" width="1680" height="961" />
+    </state>
+    <state x="304" y="165" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.961@0.23.1680.961" timestamp="1588156572292" />
+    <state x="578" y="257" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589465463886">
+      <screen x="0" y="23" width="1680" height="959" />
+    </state>
+    <state x="578" y="257" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.959@0.23.1680.959" timestamp="1589465463886" />
+    <state x="578" y="257" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.961@0.23.1680.961" timestamp="1588158571501" />
+    <state x="100" y="123" width="1480" height="761" key="DiffContextDialog" timestamp="1588159352845">
+      <screen x="0" y="23" width="1680" height="961" />
+    </state>
+    <state x="100" y="123" width="1480" height="761" key="DiffContextDialog/0.23.1680.961@0.23.1680.961" timestamp="1588159352845" />
+    <state width="1638" height="318" key="GridCell.Tab.0.bottom" timestamp="1590225370604">
+      <screen x="0" y="23" width="1680" height="959" />
+    </state>
+    <state width="1638" height="318" key="GridCell.Tab.0.bottom/0.23.1680.959@0.23.1680.959" timestamp="1590225370604" />
+    <state width="1638" height="257" key="GridCell.Tab.0.bottom/0.23.1680.961@0.23.1680.961" timestamp="1590221572077" />
+    <state width="1638" height="318" key="GridCell.Tab.0.center" timestamp="1590225370604">
+      <screen x="0" y="23" width="1680" height="959" />
+    </state>
+    <state width="1638" height="318" key="GridCell.Tab.0.center/0.23.1680.959@0.23.1680.959" timestamp="1590225370604" />
+    <state width="1638" height="257" key="GridCell.Tab.0.center/0.23.1680.961@0.23.1680.961" timestamp="1590221572076" />
+    <state width="1638" height="318" key="GridCell.Tab.0.left" timestamp="1590225370603">
+      <screen x="0" y="23" width="1680" height="959" />
+    </state>
+    <state width="1638" height="318" key="GridCell.Tab.0.left/0.23.1680.959@0.23.1680.959" timestamp="1590225370603" />
+    <state width="1638" height="257" key="GridCell.Tab.0.left/0.23.1680.961@0.23.1680.961" timestamp="1590221572075" />
+    <state width="1638" height="318" key="GridCell.Tab.0.right" timestamp="1590225370604">
+      <screen x="0" y="23" width="1680" height="959" />
+    </state>
+    <state width="1638" height="318" key="GridCell.Tab.0.right/0.23.1680.959@0.23.1680.959" timestamp="1590225370604" />
+    <state width="1638" height="257" key="GridCell.Tab.0.right/0.23.1680.961@0.23.1680.961" timestamp="1590221572076" />
+    <state width="1638" height="318" key="GridCell.Tab.1.bottom" timestamp="1590225370605">
+      <screen x="0" y="23" width="1680" height="959" />
+    </state>
+    <state width="1638" height="318" key="GridCell.Tab.1.bottom/0.23.1680.959@0.23.1680.959" timestamp="1590225370605" />
+    <state width="1638" height="318" key="GridCell.Tab.1.bottom/0.23.1680.961@0.23.1680.961" timestamp="1588170173687" />
+    <state width="1638" height="318" key="GridCell.Tab.1.center" timestamp="1590225370605">
+      <screen x="0" y="23" width="1680" height="959" />
+    </state>
+    <state width="1638" height="318" key="GridCell.Tab.1.center/0.23.1680.959@0.23.1680.959" timestamp="1590225370605" />
+    <state width="1638" height="318" key="GridCell.Tab.1.center/0.23.1680.961@0.23.1680.961" timestamp="1588170173686" />
+    <state width="1638" height="318" key="GridCell.Tab.1.left" timestamp="1590225370604">
+      <screen x="0" y="23" width="1680" height="959" />
+    </state>
+    <state width="1638" height="318" key="GridCell.Tab.1.left/0.23.1680.959@0.23.1680.959" timestamp="1590225370604" />
+    <state width="1638" height="318" key="GridCell.Tab.1.left/0.23.1680.961@0.23.1680.961" timestamp="1588170173686" />
+    <state width="1638" height="318" key="GridCell.Tab.1.right" timestamp="1590225370605">
+      <screen x="0" y="23" width="1680" height="959" />
+    </state>
+    <state width="1638" height="318" key="GridCell.Tab.1.right/0.23.1680.959@0.23.1680.959" timestamp="1590225370605" />
+    <state width="1638" height="318" key="GridCell.Tab.1.right/0.23.1680.961@0.23.1680.961" timestamp="1588170173686" />
+    <state x="610" y="212" key="RollbackChangesDialog" timestamp="1589536572892">
+      <screen x="0" y="23" width="1680" height="959" />
+    </state>
+    <state x="610" y="212" key="RollbackChangesDialog/0.23.1680.959@0.23.1680.959" timestamp="1589536572892" />
+    <state x="341" y="142" key="SettingsEditor" timestamp="1589457851683">
+      <screen x="0" y="23" width="1680" height="959" />
+    </state>
+    <state x="341" y="142" key="SettingsEditor/0.23.1680.959@0.23.1680.959" timestamp="1589457851683" />
+    <state x="341" y="142" key="SettingsEditor/0.23.1680.961@0.23.1680.961" timestamp="1588156446690" />
+    <state x="691" y="425" key="VCS.ChangelistChooser" timestamp="1588159254075">
+      <screen x="0" y="23" width="1680" height="961" />
+    </state>
+    <state x="691" y="425" key="VCS.ChangelistChooser/0.23.1680.961@0.23.1680.961" timestamp="1588159254075" />
+    <state x="505" y="234" width="670" height="676" key="search.everywhere.popup" timestamp="1589587608417">
+      <screen x="0" y="23" width="1680" height="959" />
+    </state>
+    <state x="505" y="234" width="670" height="676" key="search.everywhere.popup/0.23.1680.959@0.23.1680.959" timestamp="1589587608417" />
+    <state x="505" y="234" key="search.everywhere.popup/0.23.1680.961@0.23.1680.961" timestamp="1588157288534" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/face_rec$main.coverage" NAME="face_recognition_app Coverage Results" MODIFIED="1589469975651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/face_rec$temp.coverage" NAME="temp Coverage Results" MODIFIED="1589468355315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/face_rec$face_recognition_app.coverage" NAME="face_recognition_app Coverage Results" MODIFIED="1590222054804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/face_rec$show_camera.coverage" NAME="show_camera Coverage Results" MODIFIED="1589456912301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
