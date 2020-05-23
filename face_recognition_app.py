@@ -14,7 +14,7 @@ def open_camera():
 
 
 def sql_conn(sql):
-    conn = pymysql.connect(host="127.0.0.1", user="root", password="1234567890-", database="face_rec",
+    conn = pymysql.connect(host="127.0.0.1", user="root", password="root", database="face_recognition",
                            charset="utf8")
     cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
     cursor.execute(sql)
@@ -32,6 +32,7 @@ class User:
 
 
 user = User
+dataset = "/Users/Yan/Projects/PycharmProjects/face_rec/dataset"
 
 
 class LoginPage:
@@ -144,7 +145,7 @@ def change_password():
 
 def file_name():
     L = []
-    for root, dirs, files in os.walk("/Users/WYQ/PycharmProjects/face_rec/dataset"):
+    for root, dirs, files in os.walk(dataset):
         for file in files:
             if os.path.splitext(file)[1] == '.png':
                 L.append(os.path.join(os.path.splitext(file)[0]))
@@ -178,7 +179,7 @@ class MainPage:
         try:
             res = show_camera.start(user.object_name)
             total_time = list(res)[1]
-            tkinter.messagebox.showinfo('', "本次在线总时长" + str(total_time))
+            tkinter.messagebox.showinfo('', "本次在线总时长" + str(total_time) + "秒")
             records = list(res)[0]
             if len(records):
                 for record in records:
@@ -201,7 +202,7 @@ class MainPage:
         top = Toplevel()
         top.title('记录')
         top.maxsize(600, 600)
-        Label(top, text='欢迎使用CJLU学生管理系统', width=35, height=2,
+        Label(top, text='欢迎使用人脸识别系统', width=35, height=2,
               bg='#56764C').grid(row=0, columnspan=2, sticky=W + E)
         columns = ('所选目标', '出现时间', '消失时间', '持续时间')
         tree = Treeview(top, show='headings', columns=columns)
@@ -230,7 +231,7 @@ class MainPage:
         top = Toplevel()
         top.title('选取目标')
         top.maxsize(600, 600)
-        Label(top, text='欢迎使用CJLU学生管理系统', width=35, height=2, bg='#56764C').grid(row=0, columnspan=2, sticky=W + E)
+        Label(top, text='欢迎使用人脸识别系统', width=35, height=2, bg='#56764C').grid(row=0, columnspan=2, sticky=W + E)
         lb = Listbox(top, exportselection=0)
 
         lb.grid(row=1, columnspan=2, sticky=W + E)
@@ -298,7 +299,7 @@ class UpdatePic:
 
     def upload(self):
         img = Image.open(self.filename)
-        img.save('/Users/WYQ/PycharmProjects/face_rec/dataset/' + user.object_name + '.png')
+        img.save(dataset + user.object_name + '.png')
         tkinter.messagebox.showinfo('', '上传成功!')
         self.root.destroy()
 
