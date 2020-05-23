@@ -6,6 +6,7 @@ from tkinter.ttk import Treeview
 import pymysql
 from PIL import Image, ImageTk
 import cv2 as cv
+import os
 
 
 def open_camera():
@@ -13,7 +14,7 @@ def open_camera():
 
 
 def sql_conn(sql):
-    conn = pymysql.connect(host="127.0.0.1", user="root", password="root", database="face_recognition",
+    conn = pymysql.connect(host="127.0.0.1", user="root", password="1234567890-", database="face_rec",
                            charset="utf8")
     cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)
     cursor.execute(sql)
@@ -26,6 +27,7 @@ def sql_conn(sql):
 
 class User:
     id = None
+    object_name = None
     username = None
 
 
@@ -72,7 +74,7 @@ def sign_up():
     def sign():
         try:
             if password1.get() == password2.get():
-                sql = """insert into account(username, pwd) values ('%s','%s')""" % (username.get(), password1.get())
+                sql = """insert into account (username, pwd) values ('%s','%s')""" % (username.get(), password1.get())
                 sql_conn(sql)
                 tkinter.messagebox.showinfo('', '注册成功!')
                 top.destroy()
@@ -140,8 +142,18 @@ def change_password():
     Button(top, text='确认修改', width=10, command=change).place(x=130, y=200)
 
 
+def file_name():
+    L = []
+    for root, dirs, files in os.walk("/Users/WYQ/PycharmProjects/face_rec/dataset"):
+        for file in files:
+            if os.path.splitext(file)[1] == '.png':
+                L.append(os.path.join(os.path.splitext(file)[0]))
+    return L
+
+
 class MainPage:
     def __init__(self):
+
         self.root = tkinter.Tk()
         self.root.title('人脸识别系统')
         self.root.maxsize(600, 380)
@@ -151,55 +163,111 @@ class MainPage:
         self.frame = Frame()
         self.frame.grid(row=2, pady=20)
 
-        image_open = Image.open('dataset/badge.png').resize((200, 200))
+        image_open = Image.open('logo/badge.png').resize((200, 200))
         image = ImageTk.PhotoImage(image=image_open)
-        Label(self.frame, image=image).grid(row=1, columnspan=4, pady=20)
+        Label(self.frame, image=image).grid(row=1, columnspan=5, pady=20)
         Button(self.frame, text="开始使用", width=10, command=self.start).grid(row=2, column=0, pady=10, padx=10)
         Button(self.frame, text="上传照片", width=10, command=self.open_update).grid(row=2, column=1, pady=10, padx=10)
-        Button(self.frame, text="查询记录", width=10, command=self.open_records).grid(row=2, column=2, pady=10, padx=10)
-        Button(self.frame, text="退出系统", width=10, command=self.root.destroy).grid(row=2, column=3, pady=10, padx=10)
+        Button(self.frame, text="选择目标", width=10, command=self.choose_person).grid(row=2, column=2, pady=10, padx=10)
+        Button(self.frame, text="查询记录", width=10, command=self.open_records).grid(row=2, column=3, pady=10, padx=10)
+        Button(self.frame, text="退出系统", width=10, command=self.root.destroy).grid(row=2, column=4, pady=10, padx=10)
 
         self.root.mainloop()
 
     def start(self):
         try:
-            res = show_camera.start(user.username)
+            res = show_camera.start(user.object_name)
             total_time = list(res)[1]
             tkinter.messagebox.showinfo('', "本次在线总时长" + str(total_time))
             records = list(res)[0]
             if len(records):
                 for record in records:
-                    sql = """insert into records(aid, appear, disappear, last_time) values ('%s', '%s', '%s', '%s')""" % (
-                        user.id, record['appear'], record['disappear'], record['last'])
+                    sql = """insert into records(aid, object_name ,appear, disappear, last_time)
+                    values ('%s', '%s', '%s', '%s', '%s')""" \
+                          % (user.id, user.object_name, record['appear'], record['disappear'], record['last'])
                     sql_conn(sql)
         except TypeError:
-            tkinter.messagebox.showerror('错误', '请先上传照片')
+            tkinter.messagebox.showerror('错误', '请先选取目标')
 
     def open_update(self):
         UpdatePic()
 
     def open_records(self):
+        def claer_history():
+            sql = """truncate table records"""
+            sql_conn(sql)
+            top.destroy()
+
         top = Toplevel()
         top.title('记录')
         top.maxsize(600, 600)
         Label(top, text='欢迎使用CJLU学生管理系统', width=35, height=2,
               bg='#56764C').grid(row=0, columnspan=2, sticky=W + E)
-        columns = ('出现时间', '消失时间', '持续时间')
+        columns = ('所选目标', '出现时间', '消失时间', '持续时间')
         tree = Treeview(top, show='headings', columns=columns)
+        tree.column('所选目标', width=150, anchor='center')
         tree.column('出现时间', width=150, anchor='center')
         tree.column('消失时间', width=150, anchor='center')
         tree.column('持续时间', width=150, anchor='center')
+        tree.heading('所选目标', text='所选目标')
         tree.heading('出现时间', text='出现时间')
         tree.heading('消失时间', text='消失时间')
         tree.heading('持续时间', text='持续时间')
         sql = "select * from records where aid = '%s'" % user.id
         ret = sql_conn(sql)
         for i in range(len(ret)):
-            tree.insert('', i, values=(ret[i]['appear'], ret[i]['disappear'], ret[i]['last_time']))
+            tree.insert('', i,
+                        values=(ret[i]['object_name'], ret[i]['appear'], ret[i]['disappear'], ret[i]['last_time']))
         tree.grid(row=1, column=0, sticky=NSEW)
         scrollbar = Scrollbar(top)
         scrollbar.grid(row=1, column=1, sticky=NS)
         scrollbar.config(command=tree.yview)
+        # Button(top, text="清除记录", width=10, command=claer_history).grid(row=2, column=0, pady=10, padx=10)
+        # top.mainloop()
+
+    def choose_person(self):
+        global choose_one
+        top = Toplevel()
+        top.title('选取目标')
+        top.maxsize(600, 600)
+        Label(top, text='欢迎使用CJLU学生管理系统', width=35, height=2, bg='#56764C').grid(row=0, columnspan=2, sticky=W + E)
+        lb = Listbox(top, exportselection=0)
+
+        lb.grid(row=1, columnspan=2, sticky=W + E)
+        scr1 = Scrollbar(top)
+        lb.configure(yscrollcommand=scr1.set)
+        scr1['command'] = lb.yview
+        scr1.grid(row=1, column=1, sticky=E + N + S)
+
+        for item in file_name():
+            lb.insert("end", item)
+
+            def choose_one():
+                user.object_name = lb.get(ACTIVE)
+                top.destroy()
+
+        Button(top, text="确定", command=choose_one).grid(row=2, columnspan=2, pady=10, ipadx=20)
+
+        top.mainloop()
+
+
+def set_name():
+    def set():
+        user.object_name = object_name.get()
+        tkinter.messagebox.showerror('成功', '设置姓名成功')
+        top.destroy()
+
+    top = Toplevel()
+    top.title('修改密码')
+    top.maxsize(350, 250)
+    top.geometry('350x250')
+    Label(top, text='欢迎使用人脸识别系统', width=40, height=2,
+          bg='#56764C').grid(row=0, sticky=W + E)
+
+    object_name = StringVar()
+    Label(top, text='输入姓名: ').place(x=45, y=60)
+    Entry(top, textvariable=object_name).place(x=110, y=60)
+    Button(top, text='确认修改', width=10, command=set).place(x=130, y=200)
 
 
 class UpdatePic:
@@ -217,7 +285,8 @@ class UpdatePic:
         self.canva = Canvas(self.frame, width=200, height=200, bg="gray")
         self.canva.grid(row=1, column=1)
         tkinter.Button(self.frame, text="选择文件", width=10, command=self.choose_file).grid(row=2, column=1, pady=10)
-        tkinter.Button(self.frame, text="确定", width=10, command=self.upload).grid(row=3, column=1, pady=10)
+        tkinter.Button(self.frame, text="设置姓名", width=10, command=set_name).grid(row=3, column=1, pady=10)
+        tkinter.Button(self.frame, text="确定", width=10, command=self.upload).grid(row=4, column=1, pady=10)
 
         self.root.mainloop()
 
@@ -229,7 +298,7 @@ class UpdatePic:
 
     def upload(self):
         img = Image.open(self.filename)
-        img.save('/Users/Yan/Projects/PycharmProjects/face_rec/dataset/' + user.username + '.png')
+        img.save('/Users/WYQ/PycharmProjects/face_rec/dataset/' + user.object_name + '.png')
         tkinter.messagebox.showinfo('', '上传成功!')
         self.root.destroy()
 

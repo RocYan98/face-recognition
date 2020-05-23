@@ -4,16 +4,16 @@ import time
 import copy
 
 
-def start(username):
+def start(object_name):
     # 读取目标图片
-    localtion = "dataset/" + username + ".png"
+    localtion = "dataset/" + object_name + ".png"
     target = cv2.imread(localtion)
     # 目标encoding
     target_encoding = face_recognition.face_encodings(target)[0]
 
     # 将目标放入人脸库
     know_encodings = [target_encoding]
-    know_names = [username]
+    know_names = [object_name]
 
     # 打开摄像头
     vc = cv2.VideoCapture(0)
@@ -31,14 +31,15 @@ def start(username):
     time_list = []
 
     while True:
-        # 获取摄像头中的一帧，reg表示是否获取到
+        # 获取摄像头中的一帧，ret表示是否获取到
         ret, img = vc.read()
         if not ret:
-            print("没有获取到视频")
+            print("未获取视频")
             break
 
         # 获取图片中人脸到位置
         locations = face_recognition.face_locations(img)
+
         # 获取图片中所有人脸到encoding
         unknow_encodings = face_recognition.face_encodings(img, locations)
 
@@ -54,7 +55,7 @@ def start(username):
                 if match:
                     name = know_name
 
-            if name == username:
+            if name == object_name:
                 target_appear = True
 
             # 将寻找到的人脸旁写上相应的姓名
