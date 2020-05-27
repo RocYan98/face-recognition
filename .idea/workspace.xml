@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8087c9af-37e4-449b-89cb-bec7c8a2807f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/yqp.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/face_recognition_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/face_recognition_app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +136,8 @@
       <workItem from="1590218893421" duration="3586000" />
       <workItem from="1590225373328" duration="705000" />
       <workItem from="1590480746810" duration="1000" />
-      <workItem from="1590480750107" duration="1021000" />
+      <workItem from="1590480750107" duration="1548000" />
+      <workItem from="1590564710559" duration="650000" />
     </task>
     <servers />
   </component>
@@ -166,29 +169,29 @@
       <screen x="0" y="23" width="1680" height="961" />
     </state>
     <state x="100" y="123" width="1480" height="761" key="DiffContextDialog/0.23.1680.961@0.23.1680.961" timestamp="1588159352845" />
-    <state width="1638" height="257" key="GridCell.Tab.0.bottom" timestamp="1590481790887">
+    <state width="1638" height="257" key="GridCell.Tab.0.bottom" timestamp="1590565358534">
       <screen x="0" y="23" width="1680" height="961" />
     </state>
     <state width="1638" height="257" key="GridCell.Tab.0.bottom/0.23.1680.959@0.23.1680.959" timestamp="1590227041997" />
-    <state width="1638" height="257" key="GridCell.Tab.0.bottom/0.23.1680.961@0.23.1680.961" timestamp="1590481790887" />
+    <state width="1638" height="257" key="GridCell.Tab.0.bottom/0.23.1680.961@0.23.1680.961" timestamp="1590565358534" />
     <state width="1638" height="257" key="GridCell.Tab.0.bottom/0.23.1680.962@0.23.1680.962" timestamp="1590481206066" />
-    <state width="1638" height="257" key="GridCell.Tab.0.center" timestamp="1590481790886">
+    <state width="1638" height="257" key="GridCell.Tab.0.center" timestamp="1590565358534">
       <screen x="0" y="23" width="1680" height="961" />
     </state>
     <state width="1638" height="257" key="GridCell.Tab.0.center/0.23.1680.959@0.23.1680.959" timestamp="1590227041997" />
-    <state width="1638" height="257" key="GridCell.Tab.0.center/0.23.1680.961@0.23.1680.961" timestamp="1590481790886" />
+    <state width="1638" height="257" key="GridCell.Tab.0.center/0.23.1680.961@0.23.1680.961" timestamp="1590565358534" />
     <state width="1638" height="257" key="GridCell.Tab.0.center/0.23.1680.962@0.23.1680.962" timestamp="1590481206066" />
-    <state width="1638" height="257" key="GridCell.Tab.0.left" timestamp="1590481790885">
+    <state width="1638" height="257" key="GridCell.Tab.0.left" timestamp="1590565358533">
       <screen x="0" y="23" width="1680" height="961" />
     </state>
     <state width="1638" height="257" key="GridCell.Tab.0.left/0.23.1680.959@0.23.1680.959" timestamp="1590227041996" />
-    <state width="1638" height="257" key="GridCell.Tab.0.left/0.23.1680.961@0.23.1680.961" timestamp="1590481790885" />
+    <state width="1638" height="257" key="GridCell.Tab.0.left/0.23.1680.961@0.23.1680.961" timestamp="1590565358533" />
     <state width="1638" height="257" key="GridCell.Tab.0.left/0.23.1680.962@0.23.1680.962" timestamp="1590481206065" />
-    <state width="1638" height="257" key="GridCell.Tab.0.right" timestamp="1590481790886">
+    <state width="1638" height="257" key="GridCell.Tab.0.right" timestamp="1590565358534">
       <screen x="0" y="23" width="1680" height="961" />
     </state>
     <state width="1638" height="257" key="GridCell.Tab.0.right/0.23.1680.959@0.23.1680.959" timestamp="1590227041997" />
-    <state width="1638" height="257" key="GridCell.Tab.0.right/0.23.1680.961@0.23.1680.961" timestamp="1590481790886" />
+    <state width="1638" height="257" key="GridCell.Tab.0.right/0.23.1680.961@0.23.1680.961" timestamp="1590565358534" />
     <state width="1638" height="257" key="GridCell.Tab.0.right/0.23.1680.962@0.23.1680.962" timestamp="1590481206066" />
     <state width="1638" height="318" key="GridCell.Tab.1.bottom" timestamp="1590225370605">
       <screen x="0" y="23" width="1680" height="959" />
@@ -236,7 +239,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/face_rec$main.coverage" NAME="face_recognition_app Coverage Results" MODIFIED="1589469975651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/face_rec$temp.coverage" NAME="temp Coverage Results" MODIFIED="1589468355315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/face_rec$face_recognition_app.coverage" NAME="face_recognition_app Coverage Results" MODIFIED="1590482041858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/face_rec$face_recognition_app.coverage" NAME="face_recognition_app Coverage Results" MODIFIED="1590565438328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/face_rec$show_camera.coverage" NAME="show_camera Coverage Results" MODIFIED="1590480750691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
